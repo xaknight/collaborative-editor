@@ -105,7 +105,7 @@ func (doc *Document) UpdateContent(newContent string) {
 func (doc *Document) startBroadcasting() {
 	for msg := range doc.broadcast {
 		doc.mu.Lock()
-		for clientConn, _ := range doc.Clients {
+		for clientConn := range doc.Clients {
 			err := clientConn.WriteMessage(websocket.TextMessage, []byte(msg))
 			if err != nil {
 				log.Printf("Error broadcasting to client: %v", err)
