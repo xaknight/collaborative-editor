@@ -17,7 +17,7 @@
     <textarea id="editor"></textarea>
 
     <script>
-        var websocket = new WebSocket("ws://localhost:8080/ws");
+        var websocket = new WebSocket("ws://(your ip address):8080/ws");
         var editor = document.getElementById("editor");
 
         websocket.onopen = function(event) {
