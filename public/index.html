@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collaborative Document</title>
+    <style>
+        #editor {
+            width: 80%;
+            height: 300px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Collaborative Document</h1>
+    <textarea id="editor"></textarea>
+
+    <script>
+        var websocket = new WebSocket("ws://localhost:8080/ws");
+        var editor = document.getElementById("editor");
+
+        websocket.onopen = function(event) {
+            console.log("WebSocket connection opened");
+        };
+
+        websocket.onmessage = function(event) {
+            // Update the editor with the received data.
+            editor.value = event.data;
+        };
+
+        websocket.onerror = function(event) {
+            console.error("WebSocket error:", event);
+        };
+
+        websocket.onclose = function(event) {
+            console.log("WebSocket connection closed");
+        };
+
+        editor.oninput = function(event) {
+            // Send the updated content to the server.
+            websocket.send(editor.value);
+        };
+    </script>
+</body>
+</html>
