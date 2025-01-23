@@ -1,0 +1,13 @@
+main page
+name  
+enter entry code 
+document
+edit func
+cursor witt name
+
+frontend 
+
+left side code edit right side output 
+move middle part 
+open site on new page
+code.page.web.app
