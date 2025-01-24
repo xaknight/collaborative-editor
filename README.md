@@ -4,13 +4,21 @@ This project is a real-time collaborative code editor built using Go (Golang) on
 
 **Project Structure:**
 collaborative-editor/
+
 ├── main.go // Main application
+
 ├── internal/ // Internal packages (handlers, document, user)
+
 ├── pkg/ // Public packages (api)
+
 ├── web/ // Frontend (static files, templates)
+
 ├── go.mod // Go modules
+
 ├── go.sum // Go modules checksums
+
 └── README.md // Project description
+
 
 **Features (Current & Planned):**
 
