@@ -99,4 +99,4 @@ collaborative-editor/
 
 **License:**
 
-This project is licensed under the [MIT License](LICENSE) (you'll need to add a LICENSE file).
+This project is licensed under the MIT License.
